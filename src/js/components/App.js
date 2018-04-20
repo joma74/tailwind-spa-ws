@@ -1,4 +1,5 @@
-import renderFnkt from "@home/main.html?style=@css/styles.css";
+// @ts-ignore
+import renderFnkt from "@home/app.html?style=@home/app.css";
 
 /* eslint-disable no-new */
 export default renderFnkt({
