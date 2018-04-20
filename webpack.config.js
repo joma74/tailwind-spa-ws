@@ -66,7 +66,11 @@ var webpackConfig = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
           {
-            loader: "file-loader"
+            loader: "file-loader",
+            options: {
+              limit: 10000,
+              name: "[name].[ext]"
+            }
           }
         ]
       },
