@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "checkJs": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "es6",
+        "baseUrl": ".",
+        "paths": {
+            "@js/*": ["src/js/*"],
+            "@components/*": ["src/js/components/*"],
+            "@css/*": ["src/assets/css/*"],
+            "@home/*": ["./*"],
+            "@html/*": ["src/assets/html/*"],
+            "@img/*": ["src/assets/img/*"],
+            "@svg/*": ["src/assets/svg/*"],
+        },
+        "lib": [
+            "es2016",
+            "dom"
+        ],
+        "sourceMap": true,
+        "jsx": "preserve"
+    },
+    "exclude": [
+        "dist",
+        "node_modules",
+        "target"
+    ],
+    "include": [
+        "src/js/**/*",
+        "types/**/*"
+    ],
+    "typeAcquisition": {
+        "enable": true
+    }
+}
