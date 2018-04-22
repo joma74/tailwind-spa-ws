@@ -69,7 +69,8 @@ var webpackConfig = {
             loader: "file-loader",
             options: {
               limit: 10000,
-              name: "[name].[ext]"
+              name: "[name].[hash:7].[ext]",
+              useRelativePath: true
             }
           }
         ]
@@ -79,7 +80,8 @@ var webpackConfig = {
         loader: "url-loader",
         options: {
           limit: 10000,
-          name: "src/assets/fonts[name].[hash:7].[ext]"
+          name: "[name].[hash:7].[ext]",
+          useRelativePath: true
         }
       }
     ]
