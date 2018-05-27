@@ -13,7 +13,7 @@
             "@components/*": ["src/js/components/*"],
             "@css/*": ["src/assets/css/*"],
             "@home/*": ["./*"],
-            "@html/*": ["src/assets/html/*"],
+            "@html/*": ["src/html/*"],
             "@img/*": ["src/assets/img/*"],
             "@svg/*": ["src/assets/svg/*"],
         },
