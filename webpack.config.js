@@ -19,18 +19,20 @@ var webpackConfig = [
       port: 8080,
       watchContentBase: false,
       hot: true,
-      stats: "errors-only"
+      stats: "errors-only",
+      host: "0.0.0.0"
     },
     resolve: {
       alias: {
         vue$: "vue/dist/vue.esm.js",
-        "@js": path.resolve(__dirname, "src/js/"),
-        "@css": path.resolve(__dirname, "src/assets/css/"),
-        "@home": path.resolve(__dirname),
-        "@img": path.resolve(__dirname, "src/assets/img/"),
-        "@svg": path.resolve(__dirname, "src/assets/svg/"),
         "@components": path.resolve(__dirname, "src/js/components/"),
-        "@html": path.resolve(__dirname, "src/assets/html/")
+        "@css": path.resolve(__dirname, "src/assets/css/"),
+        "@font": path.resolve(__dirname, "src/assets/fonts/"),
+        "@home": path.resolve(__dirname),
+        "@html": path.resolve(__dirname, "src/html/"),
+        "@img": path.resolve(__dirname, "src/assets/img/"),
+        "@js": path.resolve(__dirname, "src/js/"),
+        "@svg": path.resolve(__dirname, "src/assets/svg/"),
       }
     },
     // devtool: "source-map",
