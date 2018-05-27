@@ -110,7 +110,7 @@ var webpackConfig = [
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/template.html",
-        title: "Cointoad"
+        title: "Template"
       }),
       new webpack.NamedModulesPlugin(),
     ]
