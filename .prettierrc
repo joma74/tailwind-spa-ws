@@ -1,8 +1,6 @@
 {
   "arrowParens": "always",
   "bracketSpacing": true,
-  "eslintIntegration": false,
-  "ignorePath": ".prettierignore",
   "printWidth": 80,
   "semi": false,
   "singleQuote": false,
