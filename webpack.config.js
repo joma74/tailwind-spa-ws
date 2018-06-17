@@ -1,9 +1,9 @@
-const path = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var DiskPlugin = require("webpack-disk-plugin");
-const prettyjson = require("prettyjson");
+const path = require("path")
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+var DiskPlugin = require("webpack-disk-plugin")
+const prettyjson = require("prettyjson")
 
 /**
  * @type {import("webpack-dev-server").Configuration}
@@ -24,7 +24,7 @@ var webpackConfig = [
     entry: "./src/js/index",
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js"
+      filename: "bundle.js",
     },
     devServer,
     resolve: {
@@ -38,7 +38,7 @@ var webpackConfig = [
         "@img": path.resolve(__dirname, "src/assets/img/"),
         "@js": path.resolve(__dirname, "src/js/"),
         "@svg": path.resolve(__dirname, "src/assets/svg/"),
-      }
+      },
     },
     // devtool: "source-map",
     module: {
@@ -50,16 +50,16 @@ var webpackConfig = [
             loader: "vue-template-loader",
             options: {
               hmr: true,
-              transformToRequire: {
+              transformAssetUrls: {
                 video: ["src", "poster"],
                 source: "src",
                 img: "src",
                 image: "xlink:href",
                 object: "data",
-                use: ["href", "xlink:href"]
-              }
-            }
-          }
+                use: ["href", "xlink:href"],
+              },
+            },
+          },
         },
         {
           test: /\.css$/,
@@ -68,11 +68,11 @@ var webpackConfig = [
             {
               loader: "css-loader",
               options: {
-                importLoaders: 1
-              }
+                importLoaders: 1,
+              },
             },
-            "postcss-loader"
-          ]
+            "postcss-loader",
+          ],
         },
         {
           test: /\.(png|jpe?g|gif|svg)(#.*)?(\?.*)?$/,
@@ -83,10 +83,10 @@ var webpackConfig = [
                 limit: 10000,
                 emitFile: true,
                 name: "[name].[ext]",
-                useRelativePath: true
-              }
-            }
-          ]
+                useRelativePath: true,
+              },
+            },
+          ],
         },
         {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -95,10 +95,10 @@ var webpackConfig = [
             limit: 10000,
             emitFile: true,
             name: "[name].[ext]",
-            useRelativePath: true
-          }
-        }
-      ]
+            useRelativePath: true,
+          },
+        },
+      ],
     },
     node: {
       // prevent webpack from injecting useless setImmediate polyfill because Vue
@@ -110,26 +110,26 @@ var webpackConfig = [
       fs: "empty",
       net: "empty",
       tls: "empty",
-      child_process: "empty"
+      child_process: "empty",
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/template.html",
-        title: "Template"
+        title: "Template",
       }),
       new webpack.NamedModulesPlugin(),
-    ]
+    ],
   },
   {
     entry: "./src/js/dummy",
     output: {
       path: path.resolve(__dirname, "build"),
-      filename: "dummy.js"
+      filename: "dummy.js",
     },
     resolve: {
       alias: {
-        "@home": path.resolve(__dirname)
-      }
+        "@home": path.resolve(__dirname),
+      },
     },
     module: {
       rules: [
@@ -140,14 +140,14 @@ var webpackConfig = [
               {
                 loader: "css-loader",
                 options: {
-                  importLoaders: 1
-                }
+                  importLoaders: 1,
+                },
               },
-              "postcss-loader"
-            ]
-          })
-        }
-      ]
+              "postcss-loader",
+            ],
+          }),
+        },
+      ],
     },
     plugins: [
       new webpack.NamedModulesPlugin(),
@@ -155,21 +155,21 @@ var webpackConfig = [
       // Write out asset files to disk.
       new DiskPlugin({
         output: {
-          path: path.resolve(__dirname, "build")
+          path: path.resolve(__dirname, "build"),
         },
         files: [
           {
             asset: /\.css$/,
             output: {
-              filename: "styles.css"
-            }
-          }
-        ]
-      })
-    ]
+              filename: "styles.css",
+            },
+          },
+        ],
+      }),
+    ],
   },
-];
+]
 
-console.log(prettyjson.render(webpackConfig));
+console.log(prettyjson.render(webpackConfig))
 
-module.exports = webpackConfig;
+module.exports = webpackConfig
