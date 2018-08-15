@@ -4601,9 +4601,9 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-"vue-template-loader@https://github.com/joma74/vue-template-loader.git":
+"vue-template-loader@https://github.com/joma74/vue-template-loader.git#toccutilsfork":
   version "1.0.0"
-  resolved "https://github.com/joma74/vue-template-loader.git#1a104799996f03c8686612c22d9a1b54de4954c9"
+  resolved "https://github.com/joma74/vue-template-loader.git#7c43c4a53adb4aa9012dbf4077973efc5d210f74"
   dependencies:
     "@vue/component-compiler-utils" "https://github.com/joma74/component-compiler-utils.git#with-dist-files"
     hash-sum "^1.0.2"

@@ -25,7 +25,7 @@
     "url-loader": "^1.0.1",
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.5.16",
-    "vue-template-loader": "https://github.com/joma74/vue-template-loader.git",
+    "vue-template-loader": "https://github.com/joma74/vue-template-loader.git#toccutilsfork",
     "webpack": "^3.8.1",
     "webpack-dev-server": "2.11.1",
     "webpack-disk-plugin": "^0.0.2"
