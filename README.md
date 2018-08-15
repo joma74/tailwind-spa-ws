@@ -22,7 +22,7 @@ Also note the applied CSS classes from `tailwind-css` in `app.html`.
 
 ## How do i save my work for e.g. distribution
 
-Forking this project and commiting your changes there is certainly the right first option, but there is an additional option I am using: Run `Saves as` from your browser and put it e.g. to `dist`. This should save all the html, including all css as head's style and other assets. If you have put no other magic inside your app - e.g. JS that does more than render html with some css - these files are all you need. Just open the `dist/Template.html` file delivered here in the browser of your choice.
+Forking this project and commiting your changes there is certainly the right first option, but there is an additional option I am using: Run `Save as` from your browser and put it e.g. to the `dist` folder. This should save all the html, including all css as head's style and other assets. If you have put no other magic inside your app - e.g. JS that does more than render html with some css - these files are all you need. Just open the `dist/Template.html` file delivered here in the browser of your choice.
 
 _P.S. Image assets get downloaded, but the svgs are not. Dunno. Ask your browser vendor._
 
