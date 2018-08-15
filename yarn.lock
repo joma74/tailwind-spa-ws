@@ -99,7 +99,7 @@
 
 "@vue/component-compiler-utils@https://github.com/joma74/component-compiler-utils.git#with-dist-files":
   version "2.0.0"
-  resolved "https://github.com/joma74/component-compiler-utils.git#7d8b1d63d76e65bb496352accadc08820f64734e"
+  resolved "https://github.com/joma74/component-compiler-utils.git#678ab7726ce462ff5807c34feafa26dee236c6fa"
   dependencies:
     consolidate "^0.15.1"
     hash-sum "^1.0.2"
