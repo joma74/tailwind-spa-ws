@@ -1,10 +1,24 @@
 <body class="min-h-screen flex items-center justify-center flex-col">
-    <h1 class="text-5xl text-purple font-sans">
-        Greetings hot-updateable tailwindcss
-    </h1>
-    <p class="text-lg">Powered by</p>
-    <div>
-        <img src="~@img/webpacklogo.png">
-        <img src="~@img/vuejslogo.png">
-    </div>
+	<h1 class="text-5xl text-purple font-sans text-center mb-8">
+		Greetings hot-updateable tailwindcss
+	</h1>
+	<p class="text-2xl flex items-center">
+		<svg class="w-6 h-6 opacity-50 fill-current relative mr-2">
+			<use href="~@svg/toolbar.svg#dashboard"></use>
+		</svg>
+		Powered by
+		<svg class="w-6 h-6 opacity-50 fill-current relative ml-2">
+			<use href="~@svg/toolbar.svg#cog"></use>
+		</svg>
+	</p>
+	<div class="flex flex-shrink">
+		<img
+		 style="object-fit: contain"
+		 src="~@img/webpacklogo.png"
+		>
+		<img
+		 style="object-fit: contain"
+		 src="~@img/vuejslogo.png"
+		>
+	</div>
 </body>
