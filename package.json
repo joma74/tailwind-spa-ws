@@ -4,9 +4,13 @@
     "js_frmt": "./node_modules/.bin/prettier --config ${PWD}/.prettierrc --write './src/js/**/*.js'",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --watch --hot --no-progress --config=webpack.config.js"
   },
+  "resolutions": {
+    "**/@types/webpack": "~3"
+  },
   "devDependencies": {
     "@types/webpack": "3.8.11",
     "@types/webpack-dev-server": "^2.9.4",
+    "@types/webpack-env": "^1.13.6",
     "cross-env": "^5.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
