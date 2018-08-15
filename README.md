@@ -22,7 +22,7 @@ Also note the applied CSS classes from `tailwind-css` in `app.html`.
 
 ## How do i save my work for e.g. distribution
 
-Forking this project and commiting your changes there is certainly the right first option, but there is an additional option I am using: Run `Saves as` from your browser and put it e.g. to `dist`. This should save all the html, including all css as head's style and other assets. If you have put no other magic inside your app - e.g. JS that does more than render html with some css - these files are all you need. Just open the `dist/Template.html` delivered here.
+Forking this project and commiting your changes there is certainly the right first option, but there is an additional option I am using: Run `Saves as` from your browser and put it e.g. to `dist`. This should save all the html, including all css as head's style and other assets. If you have put no other magic inside your app - e.g. JS that does more than render html with some css - these files are all you need. Just open the `dist/Template.html` file delivered here in the browser of your choice.
 
 _P.S. Image assets get downloaded, but the svgs are not. Dunno. Ask your browser vendor._
 
@@ -32,11 +32,11 @@ There are two entry points configured in webpack.
 
 The first one is `src/js/index.js`. That will be what your spa will primarly be showing. Essentially it makes a `vue` app (see also `src/js/components/App.js`) with special support from `vue-template-loader`. `vue-template-loader` is what JS-ifies your `app.html` file and assets within that and renders them in your browser.
 
-The second one is `src/js/dummy.js`, which is just a dummy for forcing webpack to make a `build/styles.css` file, which is configured by a once-generated `tailwind.js`, and outputs what is configured in your `app.css`. The same CSS content is applied inline as javascript via webpack as a 311.819 column wide module text source. What is somewhat hard to find and digest in your browsers dev tool, but performant for hot-reloaded changes :smirk: Hence the second entry point.
+The second one is `src/js/dummy.js`, which is just a dummy for forcing webpack to make a `build/styles.css` file, which is configured by a once-generated `tailwind.js`, and outputs what is configured in your `app.css`. The same CSS content is applied inline as javascript via webpack as a 311.819 column wide module text source. What is somewhat hard to find and digest in your browsers dev tool, but performant for hot-reloaded changes :smirk:. Hence the second entry point.
 
 ## Anything further
 
-Said will not hinder you to sprinkle some additional `vue` powered components, rendering further html, inside your app.
+This shall not hinder you to sprinkle some additional `vue` powered components, rendering further html, inside your app.
 Like this `vue` component...
 
 ```js
@@ -79,13 +79,13 @@ export default renderFnkt(vueComponentOptions)
 ```html
 // app.html
 ...
-	<div id="x-rates-timelines-options" class="flex mr-2-ex-last">
-	<optionline name="1H"></optionline>
-	<optionline name="1D"></optionline>
-	<optionline name="1W"></optionline>
-	<optionline name="1M" :isActive="true"></optionline>
-	<optionline name="1Y"></optionline>
-	<optionline name="ALL"></optionline>
+<div id="x-rates-timelines-options" class="flex mr-2-ex-last">
+    <optionline name="1H"></optionline>
+    <optionline name="1D"></optionline>
+    <optionline name="1W"></optionline>
+    <optionline name="1M" :isActive="true"></optionline>
+    <optionline name="1Y"></optionline>
+    <optionline name="ALL"></optionline>
 </div>
 ...
 ```
