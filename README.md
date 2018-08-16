@@ -12,8 +12,6 @@ It is targeted for online presentations/pocs/playgrounds which revolve around mo
 
 One of your primary files you will be working with is the file `app.html`. It starts and ends with the `<body>` element. This `<body>` is then included within `src/template.html`, where the rest of the `<html>` page is defined.
 
-_P.S. I know, `vue` is strictly against mounting on the `<body>` element, but_ `¯\_(ツ)_/¯`
-
 To see it in action, after installing run `yarn watch` on your workstation, then open a browser pointing at <link>http://localhost:8080/dist/index.html</link>. This will show you the screen from above.
 
 The assets, like images and svgs you see there, are expected to be under `src/assets`. The expected location and handling of your assets are configureable via `webpack.config.js`.
@@ -32,11 +30,13 @@ There are two entry points configured in webpack.
 
 The first one is `src/js/index.js`. That will be what your spa will primarly be showing. Essentially it makes a `vue` app (see also `src/js/components/App.js`) with special support from `vue-template-loader`. `vue-template-loader` is what JS-ifies your `app.html` file and assets within that and renders them in your browser.
 
+_P.S. I know, `vue` is strictly against mounting on the `<body>` element as prefered in `app.html`, but_ `¯\_(ツ)_/¯`
+
 The second one is `src/js/dummy.js`, which is just a dummy for forcing webpack to make a `build/styles.css` file, which is configured by a once-generated `tailwind.js`, and outputs what is configured in your `app.css`. The same CSS content is applied inline as javascript via webpack as a 311.819 column wide module text source. What is somewhat hard to find and digest in your browsers dev tool, but performant for hot-reloaded changes :smirk:. Hence the second entry point.
 
 ## Anything further
 
-This shall not hinder you to sprinkle some additional `vue` powered components, rendering further html, inside your app.
+This shall not hinder you to sprinkle some additional `vue` powered components, rendering further html, inside your page.
 Like this `vue` component...
 
 ```js
