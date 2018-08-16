@@ -10,7 +10,7 @@ It is targeted for online presentations/pocs/playgrounds which revolve around mo
 
 ## Showing you around
 
-One of your primary files you will be working with is the file `app.html`. It starts and ends with the `<body>` element. This `<body>` is then included within `src/template.html`, where the rest of the `<html>` page is defined.
+One of your primary files you will be working with is the file `app.html`. It starts and ends with the `<body>` element. This `<body>` is then included within `src/template.html`, where - out of technical reasons - the rest of the `<html>` page is defined.
 
 To see it in action, after installing run `yarn watch` on your workstation, then open a browser pointing at <link>http://localhost:8080/dist/index.html</link>. This will show you the screen from above.
 
