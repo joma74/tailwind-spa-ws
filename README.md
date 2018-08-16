@@ -30,9 +30,11 @@ There are two entry points configured in webpack.
 
 The first one is `src/js/index.js`. That will be what your spa will primarly be showing. Essentially it makes a `vue` app (see also `src/js/components/App.js`) with special support from `vue-template-loader`. `vue-template-loader` is what JS-ifies your `app.html` file and assets within that and renders them in your browser.
 
-_P.S. I know, `vue` is strictly against mounting on the `<body>` element as prefered in `app.html`, but_ `¯\_(ツ)_/¯`
-
 The second one is `src/js/dummy.js`, which is just a dummy for forcing webpack to make a `build/styles.css` file, which is configured by a once-generated `tailwind.js`, and outputs what is configured in your `app.css`. The same CSS content is applied inline as javascript via webpack as a 311.819 column wide module text source. What is somewhat hard to find and digest in your browsers dev tool, but performant for hot-reloaded changes :smirk:. Hence the second entry point.
+
+Another point to note is that `src/template.html` is processed and hence required, as configured, by webpack. It contains a mount point `div` element for the vue app marked `id="app"`. Do not let that confuse you - there is a workaround, the final mount point will be the `<body>` element.
+
+_P.S. I know, `vue` is strictly against mounting on the `<body>` element as prefered in `app.html`, but_ `¯\_(ツ)_/¯`
 
 ## Anything further
 
