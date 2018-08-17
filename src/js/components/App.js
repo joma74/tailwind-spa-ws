@@ -1,8 +1,8 @@
 // @ts-ignore
 import renderFnkt from "@home/app.html?style=@home/app.css"
 
-// @ts-ignore TypeScript#26258
-/** @type {import("vue").ComponentOptions} */
+/** @typedef {import("vue").default} Vue */
+/** @type {import("vue").ComponentOptions<Vue>} */
 let vueComponentOptions = {
   name: "SPARoot",
   mounted() {
