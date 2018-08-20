@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "js_frmt": "./node_modules/.bin/prettier --config ${PWD}/.prettierrc --write './src/js/**/*.js'",
-    "watch": "cross-env NODE_ENV=development webpack-dev-server --watch --hot --no-progress --config=webpack.config.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --watch --hot --no-progress --config=webpack.config.js"
   },
   "resolutions": {
     "**/@types/webpack": "~3"
@@ -25,6 +25,7 @@
     "style-loader": "^0.19.0",
     "stylelint-config-recommended": "^2.1.0",
     "tailwindcss": "^0",
+    "testcafe": "^0.21.1",
     "typescript": "^3.0.1",
     "url-loader": "^1.0.1",
     "vue-loader": "^14.2.2",
