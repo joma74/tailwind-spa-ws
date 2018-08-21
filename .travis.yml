@@ -13,6 +13,8 @@ cache: yarn
 addons:
   chrome: stable
 
+script: yarn ci
+
 notifications:
   email:
     recipients:
