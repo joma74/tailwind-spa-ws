@@ -12,6 +12,7 @@ cache: yarn
 
 addons:
   chrome: stable
+  firefox: latest
 
 script: yarn ci
 

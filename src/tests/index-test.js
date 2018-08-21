@@ -1,8 +1,8 @@
 import { Selector } from "testcafe"
 
-fixture("Getting Started").page("http://localhost:8080/dist/index.html")
+fixture("Index Page Test").page("http://localhost:8080/dist/index.html")
 
-test("Check expected elements", async (t) => {
+test("dom has critical elements", async (t) => {
   const heading = await Selector("h1[data-desc='heading']")
 
   let headingText = await heading.innerText
