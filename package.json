@@ -3,7 +3,7 @@
   "scripts": {
     "js_frmt": "./node_modules/.bin/prettier --config ${PWD}/.prettierrc --write './src/js/**/*.js' './src/tests/**/*.js'",
     "start": "cross-env NODE_ENV=development webpack-dev-server --watch --hot --no-progress --config=webpack.config.js",
-    "test": "testcafe chrome:headless,firefox:headless src/tests/index-test.js",
+    "test": "testcafe chrome:headless src/tests/index-test.js",
     "ci": "start-server-and-test start http-get://localhost:8080/dist/index.html test"
   },
   "resolutions": {
