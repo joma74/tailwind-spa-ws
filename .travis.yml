@@ -10,6 +10,9 @@ before_install:
 
 cache: yarn
 
+env:
+  - MOZ_HEADLESS=1
+
 addons:
   chrome: stable
   firefox: latest
