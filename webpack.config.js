@@ -170,15 +170,7 @@ var webpackConfig = [
   },
 ]
 
-const output = prettyFormat(webpackConfig, {
-  theme: {
-    comment: "gray",
-    content: "reset",
-    prop: "yellow",
-    tag: "cyan",
-    value: "green",
-  },
-})
+const output = prettyFormat(webpackConfig, { highlight: true })
 
 console.log(output)
 
