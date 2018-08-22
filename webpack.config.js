@@ -3,7 +3,7 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 var DiskPlugin = require("webpack-disk-plugin")
-const prettyjson = require("prettyjson")
+const prettyFormat = require("pretty-format")
 
 /**
  * @type {import("webpack-dev-server").Configuration}
@@ -170,6 +170,16 @@ var webpackConfig = [
   },
 ]
 
-console.log(prettyjson.render(webpackConfig))
+const output = prettyFormat(webpackConfig, {
+  theme: {
+    comment: "gray",
+    content: "reset",
+    prop: "yellow",
+    tag: "cyan",
+    value: "green",
+  },
+})
+
+console.log(output)
 
 module.exports = webpackConfig
