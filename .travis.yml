@@ -16,6 +16,9 @@ env:
 addons:
   chrome: stable
   firefox: latest
+  apt:
+    packages:
+      - imagemagick
 
 script: yarn ci
 
