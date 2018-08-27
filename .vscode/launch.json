@@ -10,7 +10,15 @@
       "protocol": "inspector",
       "name": "Launch test files with TestCafe",
       "program": "${workspaceFolder}/node_modules/testcafe/bin/testcafe.js",
-      "args": ["chrome", "${file}"],
+      "args": [
+        "chrome",
+        "-S",
+        "-s",
+        "target/reports/screenshots/actual/",
+        "-p",
+        "${FIXTURE}/${TEST}/${USERAGENT}/${FILE_INDEX}.png",
+        "${file}"
+      ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     },

@@ -1,9 +1,28 @@
 import { Selector, ClientFunction } from "testcafe"
 import pretty from "pretty"
+import identifyUserAgent from "./utils/identify-useragent"
 
-fixture("Index Page Test").page("http://localhost:8080/dist/index.html")
+const fixtureName = "Index_Page_Test"
 
-test("dom has critical elements", async (t) => {
+fixture(fixtureName).page("http://localhost:8080/dist/index.html")
+
+const getUA = ClientFunction(() => navigator.userAgent)
+
+const testName = "dom_has_critical_elements"
+
+test(testName, async (t) => {
+  const ua = await getUA()
+
+  await t.takeScreenshot(
+    fixtureName +
+      "/" +
+      testName +
+      "/" +
+      identifyUserAgent(ua) +
+      "/" +
+      "scsh_1.png",
+  )
+
   const heading = await Selector("h1[data-desc='heading']")
 
   let headingText = await heading.innerText
