@@ -1,6 +1,6 @@
 # tailwind-spa-ws
 
-[![Build Status](https://travis-ci.org/joma74/tailwind-spa-ws.svg?branch=master)](https://travis-ci.org/joma74/tailwind-spa-ws)
+[![Build Status](https://travis-ci.org/joma74/tailwind-spa-ws.svg?branch=master)](https://travis-ci.org/joma74/tailwind-spa-ws) [![Greenkeeper badge](https://badges.greenkeeper.io/joma74/tailwind-spa-ws.svg)](https://greenkeeper.io/)
 
 A `tailwind-css` :heart_eyes: enabled html/css-based single page application(spa) workspace(ws) with hot reload. Powered by `webpack`, `vue` and `vue-template-loader`.
 
