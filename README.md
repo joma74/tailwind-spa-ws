@@ -1,6 +1,6 @@
 # tailwind-spa-ws
 
-[![Build Status](https://travis-ci.org/joma74/tailwind-spa-ws.svg?branch=master)](https://travis-ci.org/joma74/tailwind-spa-ws) [![![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=joma74/tailwind-spa-ws)](https://dependabot.com)
+[![Build Status](https://travis-ci.org/joma74/tailwind-spa-ws.svg?branch=master)](https://travis-ci.org/joma74/tailwind-spa-ws) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=joma74/tailwind-spa-ws)](https://dependabot.com)
 
 A `tailwind-css` :heart_eyes: enabled html/css-based single page application(spa) workspace(ws) with hot reload. Powered by `webpack`, `vue` and `vue-template-loader`.
 
