@@ -54,6 +54,6 @@
     "webpack-disk-plugin": "^0.0.2"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2"
   }
 }
