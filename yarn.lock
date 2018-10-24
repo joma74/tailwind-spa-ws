@@ -43,7 +43,7 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/extract-text-webpack-plugin@^2":
+"@types/extract-text-webpack-plugin@^2", "@types/extract-text-webpack-plugin@~2":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-2.1.0.tgz#db0eb859d1b61ea5d2a0b75ad34b4ff317a18379"
   dependencies:
@@ -6122,8 +6122,8 @@ stackframe@^0.3.1:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-0.3.1.tgz#33aa84f1177a5548c8935533cbfeb3420975f5a4"
 
 start-server-and-test@^1.7.0:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.4.tgz#0fce5cf5fe388cafab864f7947303f28b6832919"
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.5.tgz#33c6ffb71a2a24db2b713af711b55c334e5e20e0"
   dependencies:
     bluebird "3.5.2"
     check-more-types "2.24.0"
