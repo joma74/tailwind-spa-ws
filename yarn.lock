@@ -2050,9 +2050,9 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@3.2.5, debug@^3.1.0:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.5.tgz#c2418fbfd7a29f4d4f70ff4cea604d4b64c46407"
+debug@3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   dependencies:
     ms "^2.1.1"
 
@@ -2061,6 +2061,12 @@ debug@=3.1.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
     ms "2.0.0"
+
+debug@^3.1.0:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.5.tgz#c2418fbfd7a29f4d4f70ff4cea604d4b64c46407"
+  dependencies:
+    ms "^2.1.1"
 
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
@@ -6122,16 +6128,16 @@ stackframe@^0.3.1:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-0.3.1.tgz#33aa84f1177a5548c8935533cbfeb3420975f5a4"
 
 start-server-and-test@^1.7.0:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.5.tgz#33c6ffb71a2a24db2b713af711b55c334e5e20e0"
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.7.tgz#911c80ed5e7e6bda55dfd897104091a25477f241"
   dependencies:
     bluebird "3.5.2"
     check-more-types "2.24.0"
-    debug "3.2.5"
+    debug "3.2.6"
     execa "0.11.0"
     lazy-ass "1.6.0"
     ps-tree "1.1.0"
-    wait-on "3.0.1"
+    wait-on "3.1.0"
 
 static-extend@^0.1.1:
   version "0.1.2"
@@ -6941,9 +6947,9 @@ vue@^2:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-wait-on@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/wait-on/-/wait-on-3.0.1.tgz#9e3d6812c75ad9d964f15c2b536059c976166799"
+wait-on@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/wait-on/-/wait-on-3.1.0.tgz#b53da3ec2655424e4dad187d382098f337ec4d08"
   dependencies:
     core-js "^2.5.7"
     joi "^13.0.0"
