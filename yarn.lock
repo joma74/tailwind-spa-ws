@@ -6170,8 +6170,8 @@ stackframe@^0.3.1:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-0.3.1.tgz#33aa84f1177a5548c8935533cbfeb3420975f5a4"
 
 start-server-and-test@^1.7.0:
-  version "1.7.9"
-  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.9.tgz#bc475bca30e1f0f6b7c5f3e6c4b6685483f81a31"
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.10.tgz#804315f0752e2b1da1e955bb7bbb710b0482e30e"
   dependencies:
     bluebird "3.5.3"
     check-more-types "2.24.0"
