@@ -6976,8 +6976,8 @@ vue-template-es2015-compiler@^1.6.0:
     vue-hot-reload-api "^2.3.0"
 
 vue@^2:
-  version "2.5.17"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
+  version "2.5.19"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.19.tgz#c4c9ba01a97a23ea24018d4702e994c15785e025"
 
 wait-on@3.2.0:
   version "3.2.0"
