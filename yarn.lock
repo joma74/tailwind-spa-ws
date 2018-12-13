@@ -44,7 +44,7 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/extract-text-webpack-plugin@^2", "@types/extract-text-webpack-plugin@~2":
+"@types/extract-text-webpack-plugin@^2":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-2.1.0.tgz#db0eb859d1b61ea5d2a0b75ad34b4ff317a18379"
   dependencies:
@@ -58,9 +58,10 @@
     "@types/relateurl" "*"
     "@types/uglify-js" "*"
 
-"@types/html-webpack-plugin@^2.30.1", "@types/html-webpack-plugin@~2":
+"@types/html-webpack-plugin@^2", "@types/html-webpack-plugin@^2.30.1":
   version "2.30.4"
   resolved "https://registry.yarnpkg.com/@types/html-webpack-plugin/-/html-webpack-plugin-2.30.4.tgz#65219d1a9b6ad4027100107d3dd08583a890b4b1"
+  integrity sha512-jq9jZdJAsJPBWitnlUPeWYJ01Aaekiq0/7bAihZ08lnBqTHVUvR+uuG+3FuUjZ2FCQR7PsmmOJpFF6/DD2Ngtg==
   dependencies:
     "@types/html-minifier" "*"
     "@types/tapable" "*"
@@ -128,9 +129,10 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/useragent/-/useragent-2.1.1.tgz#e7e897f867941b03c41144f659c8f8f412a72d06"
 
-"@types/webpack-dev-server@*", "@types/webpack-dev-server@^2.9.4", "@types/webpack-dev-server@~2":
+"@types/webpack-dev-server@^2", "@types/webpack-dev-server@^2.9.4":
   version "2.9.6"
   resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-2.9.6.tgz#423d96ae2a0956543b18cb399a0841bf20f77b24"
+  integrity sha512-5ZpNdKFxusaPdy7lG7bapsvpq8QIbHYAQXLZT9HAudwPbE8g9SlznYI7hoxyHVbJr9AecnZFQ+6LG0VpdkW3gg==
   dependencies:
     "@types/express" "*"
     "@types/http-proxy-middleware" "*"
@@ -141,23 +143,14 @@
   version "1.13.6"
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.13.6.tgz#128d1685a7c34d31ed17010fc87d6a12c1de6976"
 
-"@types/webpack@*", "@types/webpack@~3":
-  version "3.8.14"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.14.tgz#e2bfdf7f604b3f7dc776eaa17446d7f7538f3de7"
+"@types/webpack@*", "@types/webpack@^3":
+  version "3.8.17"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.17.tgz#08d1220432a8c0b11a28ed16ca09d04478a420ff"
+  integrity sha512-tPw9kaDqwIufHhl6tctCCKCzyeZwXqheeOJ0DRJP5AvQIA7CxeWq4xdSUdcOYHTYOBDoVHYEsXqoo4/vxIVHWQ==
   dependencies:
     "@types/node" "*"
     "@types/tapable" "^0"
     "@types/uglify-js" "*"
-    source-map "^0.6.0"
-
-"@types/webpack@3.8.16":
-  version "3.8.16"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.16.tgz#14fa71b35e49292c433697da73371ec1937575fd"
-  dependencies:
-    "@types/node" "*"
-    "@types/tapable" "^0"
-    "@types/uglify-js" "*"
-    "@types/webpack-dev-server" "*"
     source-map "^0.6.0"
 
 "@vue/component-compiler-utils@^2.0.0":
