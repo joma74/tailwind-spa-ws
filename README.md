@@ -10,11 +10,13 @@ It is targeted for online presentations/pocs/playgrounds which revolve around mo
 
 ![tailwind-spa-ws-screenshot](https://user-images.githubusercontent.com/5314859/44167895-b62ee080-a0cf-11e8-97b0-3daba6722555.png)
 
+_Update to debug grid_
+
 ## Showing you around
 
 One of your primary files you will be working with is the file `app.html`. It starts and ends with the `<body>` element. This `<body>` is then included within `src/template.html`, where - out of technical reasons - the rest of your `<html>` page is defined.
 
-To see it in action, after `yarn install` run `yarn watch` on your workstation, then open a browser pointing at <link>http://localhost:8080/dist/index.html</link>. This will show you the screen from above.
+To see it in action, after `yarn install` run `yarn serve` on your workstation, then open a browser pointing at <link>http://localhost:8080/dist/index.html</link>. This will show you the screen from above.
 
 The assets, like images and svgs you see there, are expected to be under `src/assets`. The expected location and handling of your assets are configureable via `webpack.config.js`.
 
@@ -37,6 +39,10 @@ The second one is `src/js/dummy.js`, which is just a dummy for forcing webpack t
 Another point to note is that `src/template.html` is processed and hence required, as configured, by webpack. It contains a mount point `div` element for the vue app marked `id="app"`. Do not let that confuse you - there is a workaround, the final mount point will be the `<body>` element.
 
 _P.S. I know, `vue` is strictly against mounting on the `<body>` element as prefered in `app.html`, but_ `¯\_(ツ)_/¯`
+
+## The debug grid
+
+_TBD_
 
 ## Anything further
 
@@ -71,25 +77,28 @@ export default renderFnkt(vueComponentOptions)
 ```html
 // src/html/option-line.html
 <div class="flex -mb-px">
-    <button type="button" href="#" v-bind:class="[{'text-blue-dark': isActive, 'border-blue-dark': isActive, 'hover:border-grey-dark': !isActive}]"
-        class="appearance-none no-underline py-4 border-b text-grey-dark border-transparent">
-        <span v-html="name"></span>
-    </button>
+  <button
+    type="button"
+    href="#"
+    v-bind:class="[{'text-blue-dark': isActive, 'border-blue-dark': isActive, 'hover:border-grey-dark': !isActive}]"
+    class="appearance-none no-underline py-4 border-b text-grey-dark border-transparent"
+  >
+    <span v-html="name"></span>
+  </button>
 </div>
 ```
 
 ...applied to your...
 
 ```html
-// app.html
-...
+// app.html ...
 <div id="x-rates-timelines-options" class="flex mr-2-ex-last">
-    <optionline name="1H"></optionline>
-    <optionline name="1D"></optionline>
-    <optionline name="1W"></optionline>
-    <optionline name="1M" :isActive="true"></optionline>
-    <optionline name="1Y"></optionline>
-    <optionline name="ALL"></optionline>
+  <optionline name="1H"></optionline>
+  <optionline name="1D"></optionline>
+  <optionline name="1W"></optionline>
+  <optionline name="1M" :isActive="true"></optionline>
+  <optionline name="1Y"></optionline>
+  <optionline name="ALL"></optionline>
 </div>
 ...
 ```
