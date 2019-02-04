@@ -6126,6 +6126,44 @@ table {
   z-index: auto;
 }
 
+/*
+
+   DEBUG GRID
+   http://tachyons.io/docs/debug-grid/
+
+   Can be useful for debugging layout issues
+   or helping to make sure things line up perfectly.
+   Just tack one of these classes onto a parent element.
+
+*/
+
+body {
+  opacity: .5;
+}
+
+.debug-grid {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR4AWPAC97/9x0eCsAEPgwAVLshdpENIxcAAAAASUVORK5CYII=) repeat top left;
+}
+
+.debug-grid-16 {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVR4AWOgCLz/b0epAa6UGuBOqQHOQHLUgFEDnAbcBZ4UGwDOkiCnkIhdgNgNxAYAiYlD+8sEuo8AAAAASUVORK5CYII=) repeat top left;
+}
+
+.debug-grid-8-solid {
+  background: white url(data:image/gif;base64,R0lGODdhCAAIAPEAAADw/wDx/////wAAACwAAAAACAAIAAACDZQvgaeb/lxbAIKA8y0AOw==) repeat top left;
+}
+
+.debug-grid-16-solid {
+  background: white url(data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7) repeat top left;
+}
+
+/* https://tailwindcss.com/docs/adding-new-utilities/
+   Tailwind will intelligently group the responsive versions 
+   into its existing media queries which are output at the very 
+   end of the stylesheet. This ensures that any responsive utilities 
+   will always take precedence over unprefixed utilities. 
+*/
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

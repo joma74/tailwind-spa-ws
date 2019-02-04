@@ -6,7 +6,10 @@
       "ignoreAtRules": [
         "extends",
         "tailwind",
-        "responsive"
+        "responsive",
+        "if",
+        "for",
+        "each"
       ]
     }],
     "block-no-empty": null,
