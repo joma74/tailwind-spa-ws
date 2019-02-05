@@ -23,21 +23,40 @@ test(testName, async (t) => {
       "scsh_1.png",
   )
 
-  const heading = await Selector("h1[data-desc='heading']")
+  /**
+   * @type { SelectorAPI & HTMLElement & {fontFamily: Promise<string> & String} }
+   */
+  const heading = await /** @type { ? } */ (Selector(
+    "h1[data-desc='heading']",
+  ).addCustomDOMProperties({
+    fontFamily: (/** @type {HTMLElement} */ el) => el.style.fontFamily,
+  }))
 
   let headingText = await heading.innerText
 
   await t.expect(headingText).eql("Greetings hot-updateable tailwindcss")
 
+  // #1 via computed style
+  await t
+    .expect(heading.getStyleProperty("font-family"))
+    .contains("Luckiest Guy")
+
+  // #2 but own style is empty
+
+  await t.expect(heading.fontFamily).eql("")
+
   const svgDashboard = await Selector("svg[data-desc='dashboard']")
 
   await t.expect(svgDashboard.visible).ok()
 
-  const subheadline = await Selector("p[data-desc='subheadline']")
-
-  const subheadlineValue = await t.eval(() => subheadline().innerHTML, {
-    dependencies: { subheadline },
-  })
+  /**
+   * @type { SelectorAPI & HTMLElement }
+   */
+  const subheadline = await /** @type { ? } */ (Selector(
+    "p[data-desc='subheadline']",
+  ).addCustomDOMProperties({
+    innerHTML: (/** @type {HTMLElement} */ el) => el.innerHTML,
+  }))
 
   const expectedSubHeadlineValue = pretty(`
   	<svg data-desc="dashboard" class="w-6 h-6 opacity-50 fill-current relative mr-2">
@@ -46,9 +65,11 @@ test(testName, async (t) => {
 	Powered by
 	<svg data-desc="cog" class="w-6 h-6 opacity-50 fill-current relative ml-2">
 		<use href="src/assets/svg/toolbar.svg#cog"></use>
-	</svg>`)
+    </svg>`)
 
-  await t.expect(pretty(subheadlineValue)).eql(expectedSubHeadlineValue)
+  const actualSubHeadlineValue = await subheadline.innerHTML
+
+  await t.expect(pretty(actualSubHeadlineValue)).eql(expectedSubHeadlineValue)
 
   const svgCog = await Selector("svg[data-desc='cog']")
 

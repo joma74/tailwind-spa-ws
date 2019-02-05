@@ -8,9 +8,7 @@ It is targeted for online presentations/pocs/playgrounds which revolve around mo
 
 :sunglasses: Speeds up your fun building a webpage :sunglasses:
 
-![tailwind-spa-ws-screenshot](https://user-images.githubusercontent.com/5314859/44167895-b62ee080-a0cf-11e8-97b0-3daba6722555.png)
-
-_Update to debug grid_
+![tailwind-spa-ws-screenshot](https://user-images.githubusercontent.com/5314859/52288734-05fab000-296d-11e9-9133-664fea6496ae.png)
 
 ## Showing you around
 
