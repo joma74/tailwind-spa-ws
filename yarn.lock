@@ -7408,9 +7408,9 @@ vue-style-loader@^4.0.1:
     loader-utils "^1.0.2"
 
 vue-template-compiler@^2.5.16:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.2.tgz#6230abf7ca92d565b7471c0cc3f54d5b12aa48e7"
-  integrity sha512-2dBKNCtBPdx1TFef7T4zwF8IjOx2xbMNryCtFzneP+XIonJwOtnkq4s1mhKv8W79gXcGINQWtuaxituGAcuSnA==
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.5.tgz#2e3b4f20cdfa2a54a48895d97a5b711d0e7ad81c"
+  integrity sha512-7X/KZCqGulQ8KbysFd46cUnVzwvba7JxoPKA2TvVrO61/x0pIBqR17raV+ycnfUI4NYshhiNqH/3Db5NXErSdg==
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
