@@ -4,7 +4,11 @@ import identifyUserAgent from "./utils/identify-useragent"
 
 const fixtureName = "Index_Page_Test"
 
-fixture(fixtureName).page("http://localhost:8080/dist/index.html")
+fixture(fixtureName)
+  .page("http://localhost:8080/dist/index.html")
+  .beforeEach(async (t) => {
+    await t.resizeWindow(1280, 1024) // SXGA
+  })
 
 const getUA = ClientFunction(() => navigator.userAgent)
 
