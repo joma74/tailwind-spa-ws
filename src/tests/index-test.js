@@ -2,9 +2,7 @@ import { Selector, ClientFunction } from "testcafe"
 import pretty from "pretty"
 import identifyUserAgent from "./utils/identify-useragent"
 
-const fixtureName = "Index_Page_Test"
-
-fixture(fixtureName)
+fixture("Index_Page_Test")
   .page("http://localhost:8080/dist/index.html")
   .beforeEach(async (t) => {
     await t.resizeWindow(1280, 1024) // SXGA
@@ -18,9 +16,9 @@ test(testName, async (t) => {
   const ua = await getUA()
 
   await t.takeScreenshot(
-    fixtureName +
+    t.testRun.test.fixture.name +
       "/" +
-      testName +
+      t.testRun.test.name +
       "/" +
       identifyUserAgent(ua) +
       "/" +
@@ -28,11 +26,12 @@ test(testName, async (t) => {
   )
 
   /**
-   * @type { SelectorAPI & HTMLElement & {fontFamily: Promise<string> & String} }
+   * @type { SelectorAPI & HTMLElement & { fontFamily: Promise<String> & String} }
    */
   const heading = await /** @type { ? } */ (Selector(
     "h1[data-desc='heading']",
   ).addCustomDOMProperties({
+    // @ts-ignore
     fontFamily: (/** @type {HTMLElement} */ el) => el.style.fontFamily,
   }))
 
@@ -54,11 +53,12 @@ test(testName, async (t) => {
   await t.expect(svgDashboard.visible).ok()
 
   /**
-   * @type { SelectorAPI & HTMLElement }
+   * @type { SelectorAPI & HTMLImageElement }
    */
   const subheadline = await /** @type { ? } */ (Selector(
     "p[data-desc='subheadline']",
   ).addCustomDOMProperties({
+    // @ts-ignore
     innerHTML: (/** @type {HTMLElement} */ el) => el.innerHTML,
   }))
 
