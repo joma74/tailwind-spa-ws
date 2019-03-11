@@ -14,7 +14,7 @@
       "@font/*": ["src/assets/fonts/*"],
       "@home/*": ["./*"],
       "@html/*": ["src/html/*"],
-      "@icons/*": ["src/assets/icons/*"],
+      "@icon/*": ["src/assets/icons/*"],
       "@img/*": ["src/assets/img/*"],
       "@js/*": ["src/js/*"],
       "@svg/*": ["src/assets/svg/*"]
