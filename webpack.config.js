@@ -52,19 +52,6 @@ const rules = [
     },
   },
   {
-    test: /\.css$/,
-    use: [
-      "style-loader",
-      {
-        loader: "css-loader",
-        options: {
-          importLoaders: 1,
-        },
-      },
-      "postcss-loader",
-    ],
-  },
-  {
     test: /\.(png|jpe?g|gif|svg)(#.*)?(\?.*)?$/,
     use: [
       {
@@ -88,6 +75,19 @@ const rules = [
       useRelativePath: true,
     },
   },
+]
+
+/**
+ * @type {import("webpack").Loader[]}
+ */
+const cssLoader = [
+  {
+    loader: "css-loader",
+    options: {
+      importLoaders: 1,
+    },
+  },
+  "postcss-loader",
 ]
 
 /**
@@ -125,7 +125,10 @@ const webpackConfig = [
     },
     // devtool: "source-map",
     module: {
-      rules,
+      rules: rules.concat({
+        test: /\.css$/,
+        use: cssLoader,
+      }),
     },
     node,
     plugins: [
@@ -172,7 +175,10 @@ const webpackConfig = [
       },
     },
     module: {
-      rules,
+      rules: rules.concat({
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({ use: cssLoader }),
+      }),
     },
     node,
     plugins: [
