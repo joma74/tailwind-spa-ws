@@ -127,7 +127,11 @@ const webpackConfig = [
     module: {
       rules: rules.concat({
         test: /\.css$/,
-        use: cssLoader,
+        use: /** @type {import("webpack").Loader[]} */ ([
+          {
+            loader: "style-loader",
+          },
+        ]).concat(cssLoader),
       }),
     },
     node,
