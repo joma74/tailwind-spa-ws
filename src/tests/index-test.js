@@ -61,11 +61,9 @@ test(testName, async (t) => {
   }))
 
   const expectedSubHeadlineValue = pretty(`
-  	<svg data-desc="dashboard" class="w-6 h-6 opacity-50 fill-current relative mr-2">
+  	<svg data-desc="dashboard" class="tw-w-6 tw-h-6 tw-opacity-50 tw-fill-current tw-relative tw-mr-2">
   		<use href="src/assets/svg/toolbar.svg#dashboard"></use>
-	</svg>
-	Powered by
-	<svg data-desc="cog" class="w-6 h-6 opacity-50 fill-current relative ml-2">
+	</svg> <span class="tw-font-bold">Powered by</span>	<svg data-desc="cog" class="tw-w-6 tw-h-6 tw-opacity-50 tw-fill-current tw-relative tw-ml-2">
 		<use href="src/assets/svg/toolbar.svg#cog"></use>
     </svg>`)
 
