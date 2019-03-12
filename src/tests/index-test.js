@@ -31,8 +31,7 @@ test(testName, async (t) => {
   const heading = await /** @type { ? } */ (Selector(
     "h1[data-desc='heading']",
   ).addCustomDOMProperties({
-    // @ts-ignore
-    fontFamily: (/** @type {HTMLElement} */ el) => el.style.fontFamily,
+    fontFamily: (el) => /** @type {HTMLElement} */ (el).style.fontFamily,
   }))
 
   let headingText = await heading.innerText
@@ -58,8 +57,7 @@ test(testName, async (t) => {
   const subheadline = await /** @type { ? } */ (Selector(
     "p[data-desc='subheadline']",
   ).addCustomDOMProperties({
-    // @ts-ignore
-    innerHTML: (/** @type {HTMLElement} */ el) => el.innerHTML,
+    innerHTML: (el) => /** @type {HTMLImageElement} */ (el).innerHTML,
   }))
 
   const expectedSubHeadlineValue = pretty(`
