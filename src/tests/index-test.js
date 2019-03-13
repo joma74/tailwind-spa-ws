@@ -10,9 +10,7 @@ fixture("Index_Page_Test")
 
 const getUA = ClientFunction(() => navigator.userAgent)
 
-const testName = "dom_has_critical_elements"
-
-test(testName, async (t) => {
+test("dom_has_critical_elements", async (t) => {
   const ua = await getUA()
 
   await t.takeScreenshot(
@@ -82,4 +80,18 @@ test(testName, async (t) => {
   const imageVue = await Selector("img[data-desc='vue']")
 
   await t.expect(imageVue.visible).ok()
+})
+
+test("styles.css_is_built", async (t) => {
+  const hasBeenBuilt = await t.eval(() => {
+    return fetch("/build/styles.css", {
+      method: "HEAD",
+      headers: {
+        "Content-Type": "text/css",
+      },
+    })
+      .then((res) => res.ok)
+      .catch((error) => false)
+  })
+  await t.expect(hasBeenBuilt).ok()
 })
