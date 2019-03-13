@@ -10,11 +10,12 @@ const prettyFormat = require("pretty-format")
  * @type {import("webpack-dev-server").Configuration}
  */
 const devServer = {
-  port: 8080,
-  watchContentBase: false,
+  clientLogLevel: "warning",
+  host: "localhost",
   hot: true,
-  stats: "errors-only",
-  host: "0.0.0.0",
+  port: 8080,
+  stats: "errors-only", // normal
+  watchContentBase: false,
 }
 
 const webpack_aliase = {
@@ -111,12 +112,14 @@ const node = {
  */
 const webpackConfig = [
   {
-    entry: "./src/js/index",
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "[name].js",
-    },
     devServer,
+    entry: {
+      app: "./src/js/index",
+    },
+    output: {
+      filename: "[name].js",
+      path: path.resolve(__dirname, "dist"),
+    },
     resolve: {
       alias: {
         vue$: "vue/dist/vue.esm.js",
@@ -147,6 +150,7 @@ const webpackConfig = [
         title: "Template",
       }),
       new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
       new HardSourceWebpackPlugin({
         // Clean up large, old caches automatically.
         cachePrune: {
