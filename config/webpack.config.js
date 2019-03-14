@@ -1,3 +1,4 @@
+const helpers = require("./helpers")
 const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -6,6 +7,8 @@ const HardSourceWebpackPlugin = require("hard-source-webpack-plugin")
 const DiskPlugin = require("webpack-disk-plugin")
 const prettyFormat = require("pretty-format")
 
+const ENVAPPSRVPORT = require("./env/ENVAPPSRVPORT")
+
 /**
  * @type {import("webpack-dev-server").Configuration}
  */
@@ -13,21 +16,21 @@ const devServer = {
   clientLogLevel: "warning",
   host: "localhost",
   hot: true,
-  port: 8080,
+  port: parseInt(ENVAPPSRVPORT.getVDev()),
   stats: "errors-only", // normal
   watchContentBase: false,
 }
 
 const webpack_aliase = {
-  "@components": path.resolve(__dirname, "src/js/components/"),
-  "@css": path.resolve(__dirname, "src/assets/css/"),
-  "@font": path.resolve(__dirname, "src/assets/fonts/"),
-  "@home": path.resolve(__dirname),
-  "@html": path.resolve(__dirname, "src/html/"),
-  "@icon": path.resolve(__dirname, "src/assets/icons/"),
-  "@img": path.resolve(__dirname, "src/assets/img/"),
-  "@js": path.resolve(__dirname, "src/js/"),
-  "@svg": path.resolve(__dirname, "src/assets/svg/"),
+  "@components": helpers.rootAbs("src/js/components/"),
+  "@css": helpers.rootAbs("src/assets/css/"),
+  "@font": helpers.rootAbs("src/assets/fonts/"),
+  "@home": helpers.rootAbs(),
+  "@html": helpers.rootAbs("src/html/"),
+  "@icon": helpers.rootAbs("src/assets/icons/"),
+  "@img": helpers.rootAbs("src/assets/img/"),
+  "@js": helpers.rootAbs("src/js/"),
+  "@svg": helpers.rootAbs("src/assets/svg/"),
 }
 
 /**
@@ -118,7 +121,7 @@ const webpackConfig = [
     },
     output: {
       filename: "[name].js",
-      path: path.resolve(__dirname, "dist"),
+      path: helpers.rootAbs("dist"),
     },
     resolve: {
       alias: {
@@ -177,8 +180,8 @@ const webpackConfig = [
   {
     entry: "./src/js/dummy",
     output: {
-      path: path.resolve(__dirname, "build"),
       filename: "dummy.js",
+      path: helpers.rootAbs("build"),
     },
     resolve: {
       alias: {
@@ -199,7 +202,7 @@ const webpackConfig = [
       // @ts-ignore
       new DiskPlugin({
         output: {
-          path: path.resolve(__dirname, "build"),
+          path: helpers.rootAbs("build"),
         },
         files: [
           {
